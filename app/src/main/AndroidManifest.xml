@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bongi.emobilepastoralism">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <!-- GCM connects to Internet Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="za.co.megadose.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="za.co.megadose.permission.C2D_MESSAGE" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".app.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/MyMaterialThemeBlue">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Warnings" />
+        <activity android:name=".Notifications" />
+        <activity
+            android:name=".FullScreenBrowser"
+            android:icon="@drawable/ic_action_close"
+            android:label="@string/title_activity_full_screen_browser"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".reports.ReportsActivity"
+            android:label="@string/title_activity_reports"
+            android:theme="@style/MyMaterialThemeBlue" />
+        <activity
+            android:name=".portfolio.FarmerPortfolio"
+            android:label="@string/title_activity_farmer_portfolio"
+            android:theme="@style/MyMaterialThemeBlue" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".loginreg.LoginActivity" />
+        <activity android:name=".imageUploads.UploadAvatarActivity" />
+        <activity android:name=".FullScreenViewActivity" />
+        <activity android:name=".loginreg.ForgotPassword" />
+        <activity android:name=".imageUploads.AvatarCaptureActivity" />
+        <activity android:name="." />
+        <activity
+            android:name=".about.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/MyMaterialThemeBlue"></activity>
+    </application>
+
+</manifest>

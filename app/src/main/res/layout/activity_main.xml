@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bongi.emobilepastoralism.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pastorialism_in_africa"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:textSize="18sp"
+            android:padding="@dimen/activity_vertical_margin"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/warnings"
+            android:onClick="warn"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textColor="@color/white"
+            android:background="@drawable/bluebutton"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:onClick="notify"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textColor="@color/white"
+            android:background="@drawable/bluebutton"
+            android:layout_margin="5dp"/>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>

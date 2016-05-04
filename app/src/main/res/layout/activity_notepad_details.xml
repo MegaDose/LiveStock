@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<include
+    android:id="@+id/tool_bar"
+    layout="@layout/tool_bar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    />
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            >
+
+            <TextView
+                android:id="@+id/nmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/ntestm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nimage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nimageorg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <!--za.co.megadose.FeedImageView
+                    android:id="@+id/nnotePic"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/newlogo"
+                    android:onClick="viewImage"
+                    android:clickable="true"
+                    android:layout_marginBottom="10dp"/-->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/nnotePic"
+                        android:layout_width="400dp"
+                        android:layout_height="400dp"
+                        android:scaleType="fitCenter" >
+                    </com.android.volley.toolbox.NetworkImageView>
+
+                    <ImageView
+                        android:layout_width="400dp"
+                        android:layout_height="400dp"
+                        android:src="@drawable/image_round"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginBottom="0dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/nname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/media_head_font"
+                    android:textColor="#ff797979"
+                    android:fontFamily="sans-serif-light"
+                    />
+
+                <TextView
+                    android:id="@+id/namp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amp"
+                    android:gravity="center"
+                    android:paddingTop="0dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="#464646"
+                    android:textSize="@dimen/media_font"
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/nshadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="viewShadow"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:text="Shadow"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/nshadowing"
+                    android:layout_toRightOf="@+id/nshadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:clickable="true"
+                    android:onClick="viewShadowing"
+                    android:padding="5dp"
+                    android:text="Shadowing"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/ntrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:padding="5dp"
+                    android:text="Track"
+                    android:onClick="viewTrack"
+                    android:clickable="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/nevent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Events"
+                    android:onClick="viewEvent"
+                    android:clickable="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_toRightOf="@+id/ntrack"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/nblog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="37dp"
+                    android:padding="5dp"
+                    android:text="Blog"
+                    android:onClick="viewBlog"
+                    android:clickable="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_toRightOf="@+id/nevent"
+                    android:layout_marginLeft="15dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:background="#dedede"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:padding="5dp"
+                android:id="@+id/block">
+
+
+                <ImageView
+                    android:id="@+id/btnNShadow"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="31dp"
+                    android:clickable="true"
+                    android:onClick="viewshadow"
+                    android:src="@drawable/ic_shadow" />
+
+                <ImageView
+                    android:id="@+id/btnNMention"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="viewmention"
+                    android:clickable="true"
+                    android:src="@drawable/ic_amp" />
+
+                <ImageView
+                    android:id="@+id/btnNMessage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="31dp"
+                    android:clickable="true"
+                    android:onClick="viewnewmessage"
+                    android:src="@drawable/ic_message" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/btnedt"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:textStyle="bold"
+                android:onClick="viewEditNotePad"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit NotePad"
+                    android:background="@color/white"
+                    android:onClick="viewEditNotePad"
+                    android:clickable="true"
+                    android:textColor="#ff797979"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:background="#dedede"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More about me"
+                android:gravity="center"
+                android:padding="10dip"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:clickable="true"
+                android:onClick="toggle_about"
+                android:textColor="#ff797979"
+                android:fontFamily="sans-serif-light"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_action_down"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/aboutcolapse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Member Type"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+
+                    <TextView
+                        android:id="@+id/nmember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+                    <TextView
+                        android:id="@+id/nsex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Website"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+                    <TextView
+                        android:id="@+id/nwebsite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:linksClickable="true"
+                        android:padding="7dp"
+                        android:textColor="@color/main_head_color"
+                        android:clickable="true"
+                        android:onClick="viewWebsite"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/head1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Twitter UserName"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+                    <TextView
+                        android:id="@+id/nfollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/main_head_color"
+                        android:clickable="true"
+                        android:onClick="viewTwitter"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/head3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+                    <TextView
+                        android:id="@+id/nlocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/head2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Genre"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+                    <TextView
+                        android:id="@+id/ngenre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/head4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="About Me"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+
+                    <TextView
+                        android:id="@+id/nabout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="7dp"
+                    android:layout_marginBottom="0dp"
+
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/head5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inspiration"
+                        android:padding="3dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#dedede"
+                        android:layout_marginBottom="5dip"/>
+
+                    <TextView
+                        android:id="@+id/ninsp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="7dp"
+                android:background="#dedede"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

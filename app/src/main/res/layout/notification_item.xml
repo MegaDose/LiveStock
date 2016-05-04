@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+ 
+    <LinearLayout
+        android:id="@+id/notiblock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/feed_item_margin"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
+ 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/feed_item_padding_left_right"
+            android:paddingRight="@dimen/feed_item_padding_left_right" >
+ 
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/notepadPic"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:scaleType="fitCenter" >
+                </com.android.volley.toolbox.NetworkImageView>
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/image_round"
+
+                    />
+
+            </RelativeLayout>
+            <TextView
+                    android:id="@+id/imageurl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/feed_item_profile_name"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="7dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/media_font"
+                        android:layout_marginRight="30dp"
+                        android:text="details" />
+
+                    <LinearLayout
+                        android:id="@+id/countmess"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/redroundbutton"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        >
+                        <TextView
+                            android:id="@+id/messcount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="1"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/amp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="amp"
+                    android:textColor="@color/timestamp"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+
+                    <TextView
+                        android:id="@+id/messsent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:text="read"
+                        android:textColor="#ff0004"/>
+
+
+                    <TextView
+                        android:id="@+id/timestamp"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:text="time"
+                        android:textColor="@color/timestamp"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+                 </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/notiicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="right"
+
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/feed_item_profile_name"
+            android:visibility="gone"
+              />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/feed_item_profile_name"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/feed_item_profile_name"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/feed_item_profile_name"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/read"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/feed_item_profile_name"
+            android:visibility="gone"
+            />
+
+
+       
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dedede" />
+ 
+</LinearLayout>

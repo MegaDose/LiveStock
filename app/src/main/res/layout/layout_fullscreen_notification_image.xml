@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000">
+
+    <za.co.megadose.selfography.imageviewer.TouchImageView
+        android:id="@+id/imgDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter"
+        android:background="#000"/>
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ba000000"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="More"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ba000000"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="sans-serif-light"/>
+</RelativeLayout>

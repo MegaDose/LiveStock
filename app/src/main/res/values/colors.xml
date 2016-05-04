@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="actionbar">#3cb879</color>
+    <color name="body_background">#e8e8e8</color>
+    <color name="body_background_green">#82e783</color>
+    <color name="server_status_bar">#2b2b2b</color>
+    <color name="title_gray">#434343</color>
+    <color name="bg_msg_you">#fffa1000</color>
+    <color name="bg_msg_from">#218eed</color>
+    <color name="msg_border_color">#a1a1a1</color>
+    <color name="bg_btn_join">#1e6258</color>
+    <color name="bg_msg_input">#e8e8e8</color>
+    <color name="text_msg_input">#626262</color>
+    <color name="lblFromName">#777777</color>
+
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#dedede</color>
+    <color name="textColorPrimary">#777777</color>
+
+    <color name="colorBPrimary">#218eed</color>
+    <color name="colorBPrimaryDark">#218eed</color>
+    <color name="colorRPrimary">#ffff1100</color>
+    <color name="colorRPrimaryDark">#fffa1000</color>
+    <color name="textColorPrimaryO">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#8e8e8e</color>
+
+    <color name="Swipe_red">#ffff1100</color>
+    <color name="Swipe_blue">#ff00a1ff</color>
+    <color name="Swipe_gray">#ffd1d1d1</color>
+    <color name="Brown_Blog">#ff633300</color>
+
+    <color name="white">#ffffff</color>
+    <color name="feed_bg">#ffffff</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#ffd1d2d7</color>
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+
+    <color name="content">#6c6c6c</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#8b8b8b</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="main_head_color">#ff00a1ff</color>
+    <color name="White_color">#ffffff</color>
+
+    <!--Camera View Colours-->
+    <color name="view_background">#e8ecfa</color>
+    <color name="btn_bg">#277bec</color>
+    <color name="txt_font">#4e5572</color>
+    <color name="action_bar">#1f2649</color>
+    <!--Camera View Colours End-->
+
+    <color name="view_bg">#b20e0f</color>
+    <color name="btn_bg1">#3e4a56</color>
+
+
+    <!--Seek Progress Bar colours-->
+    <color name="seekbar_bg">#c6c6c6</color>
+    <color name="seekbar_progress">#585858</color>
+    <color name="seekbar_sec_progress">#c1c1c1</color>
+    <color name="titles">#585858</color>
+    <color name="links">#3e4a56</color>
+    <!--Seek Progress Bar colours End-->
+</resources>
