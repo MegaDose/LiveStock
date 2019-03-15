@@ -25,7 +25,7 @@ Getting Started
 Technologies Used
 
 #Android Studio
-#Database & API (MegaDose Entertainment)
+#API's (MegaDose Ltd)
 #Intel XDK
 #Google Maps
 #Photoshop
